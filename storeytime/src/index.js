@@ -7,11 +7,12 @@ import './index.css';
 import App from './App';
 // import * as serviceWorker from './serviceWorker';
 
+let h1Object = <h1 id="hello">Hello World</h1>
 ReactDOM.render(
   // <React.StrictMode>
-  //   <App />
+    <App />,
   // </React.StrictMode>,
-  <h1>Hello World</h1>,
+  // h1Object,
   document.getElementById('root')
 );
 
