@@ -2,15 +2,10 @@ import React from 'react'
 
 //Functional Component: Function that returns one chunk of JSX (<> </>)
     //the function name should be capitalized
+    //Functional components get their props from argument of the function
 
-function Header() {
-    return(
-        <div>
-            <h1>Hello From Header</h1>
-            <h2>Goodbye</h2> 
-        </div>
-         
-    )
+function Header(props) {
+    return( <h1>{props.title}</h1> )
 }
 
 //Write your export at the buttom
