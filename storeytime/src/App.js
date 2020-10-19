@@ -1,7 +1,8 @@
 import React from 'react';
 // import logo from './logo.svg';
 import Header from './Header';
-import Store from './Store'
+import Store from './Store';
+import arrayOfStores from './database';
 
 import './App.css';
 
@@ -10,28 +11,28 @@ import './App.css';
   //Props is always received as a POJO
 
   //JS code can be interpolated with {}
+//arrayOfStores needs to be saved to state somewhere, so we can dynamically decide on the number of stores to render
 
-function App() {
-  return (
-    <div className="App">
-      
-        <Header title="Storey Time"/>
+class App extends React.Component {
 
-        <ul>
-          <Store storeName="Quicklys"/>
-          <Store storeName="Vivis"/>
-          <Store 
-            storeName="Yayas"
-            price={10}
-            boolean={true}
-            funcDefinition={() => {}}
-            arrays={ [] }
-            pojo={ {} }
-          />
-        </ul>
+  state = {
+    stores: arrayOfStores
+  }
 
-    </div>
-  );
+  render(){
+    console.log(this.state)
+    return (
+      <div className="App">
+          <Header title="Storey Time"/>
+  
+          <ul>
+            
+          </ul>
+  
+      </div>
+    );
+  }
+ 
 }
 
 export default App;
