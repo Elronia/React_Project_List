@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 import Header from './Header';
-import Store from './Store';
+import StoreContainer from './StoreContainer';
 import arrayOfStores from './database';
 
 import './App.css';
@@ -13,6 +13,9 @@ import './App.css';
   //JS code can be interpolated with {}
 //arrayOfStores needs to be saved to state somewhere, so we can dynamically decide on the number of stores to render
 
+//Parent's state can be sent down as props (state -> props (OK))
+//Child's props should not become child's state (props -> state (NO) )
+
 class App extends React.Component {
 
   state = {
@@ -20,14 +23,12 @@ class App extends React.Component {
   }
 
   render(){
-    console.log(this.state)
+    console.log(arrayOfStores)
     return (
       <div className="App">
           <Header title="Storey Time"/>
   
-          <ul>
-            
-          </ul>
+          <StoreContainer stores={this.state.stores}/>
   
       </div>
     );
