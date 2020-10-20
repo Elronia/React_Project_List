@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './Header';
 import StoreContainer from './StoreContainer';
 import arrayOfStores from './database';
+import Form from './Form'
 
 import './App.css';
 
@@ -27,7 +28,7 @@ class App extends React.Component {
     return (
       <div className="App">
           <Header title="Storey Time"/>
-  
+          <Form />
           <StoreContainer stores={this.state.stores}/>
   
       </div>
