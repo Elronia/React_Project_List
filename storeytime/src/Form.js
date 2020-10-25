@@ -14,6 +14,8 @@ class Form extends React.Component {
 
     handleInputChange = (evt) => {
         // console.log(evt.target.name, evt.target.value)
+        // if(evt.target.type === "number")
+        
         this.setState({
             [evt.target.name] : evt.target.value //dynamically assigning the keys of an object; name of the input matching the name of the state
 
@@ -41,7 +43,7 @@ class Form extends React.Component {
                         name="storeName"
                     />
                     <label htmlFor="s_order">Order</label>
-                    <input type="text" 
+                    <input type="number" 
                         id="s_order" 
                         value={this.state.name}
                         onChange={this.handleInputChange}
