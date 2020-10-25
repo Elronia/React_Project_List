@@ -23,12 +23,18 @@ class App extends React.Component {
     stores: arrayOfStores
   }
 
+  creditCard = (infoFromChild) => {
+    console.log(infoFromChild, "in App")
+  }
+
   render(){
-    console.log(arrayOfStores)
+    // console.log(arrayOfStores)
     return (
       <div className="App">
           <Header title="Storey Time"/>
-          <Form />
+          <Form 
+            creditCard = {this.creditCard}
+          />
           <StoreContainer stores={this.state.stores}/>
   
       </div>

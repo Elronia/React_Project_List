@@ -38,7 +38,7 @@ class Store extends React.Component{
     }
 
     render() {
-        console.log(this.props, "STORE PROPS")
+        // console.log(this.props, "STORE PROPS")
         let {storeName, orders} = this.props.store
         //In class components, write your console.log above your return, below your render
         return(
